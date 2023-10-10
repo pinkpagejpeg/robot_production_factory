@@ -1,0 +1,49 @@
+/* Hero */
+.hero_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 48px 0 50px 0;
+}
+.hero_side {
+  display: flex;
+  flex-direction: column;
+  color: #667380;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.hero_pointer_text {
+  transform-origin: top left;
+  transform: rotate(-90deg);
+}
+.hero_pointer_text::before {
+  content: url("./../../assets/images/scroll_arrow.svg");
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transform-origin: top left;
+  transform: rotate(90deg);
+  margin-left: -8px;
+}
+.hero_main {
+  font-weight: 600;
+  max-width: 470px;
+}
+.hero_title {
+  color: #FFF;
+  font-size: 56px;
+  line-height: 72px;
+  margin-bottom: 24px;
+}
+.hero_text {
+  color: #A3B8CC;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.section_number {
+  margin-bottom: 176px;
+}/*# sourceMappingURL=style.css.map */

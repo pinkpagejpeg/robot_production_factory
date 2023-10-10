@@ -1,0 +1,10 @@
+@mixin section_number {
+    .section_number {
+        color: #667380;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+    }
+}
