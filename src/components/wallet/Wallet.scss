@@ -1,0 +1,82 @@
+@import "./../../styles/mixins";
+@include section_number;
+@include section_title;
+
+.wallet {
+
+    &_wrapper {
+        display: flex;
+        justify-content: flex-start;
+        padding: 50px 0;
+    }
+
+    &_side {
+        padding: 9px 106px 0 0;
+    }
+
+    &_money_info {
+        margin: 24px 0 44px 0;
+        color: #A3B8CC;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &_money_number {
+        font-weight: 700;
+    }
+
+    &_loot {
+        display: flex;
+        align-items: center;
+    }
+
+    &_button_loot {
+        color: #FF7F22;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    &_button_loot:hover {
+        color: #FF5722;
+        transition: 0.5s;
+    }
+
+    &_checkbox_loot {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &_checkbox_loot+&_checkbox_info {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    &_checkbox_loot+&_checkbox_info::before {
+        content: '';
+        cursor: pointer;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid #A3B8CC;
+        margin: 0 12px 0 31px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+
+    &_checkbox_loot:checked+&_checkbox_info::before {
+        background-image: url("./../../assets/images/checkbox_checked.svg");
+    }
+
+    &_checkbox_info {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+}

@@ -8,3 +8,32 @@
         text-transform: uppercase;
     }
 }
+
+@mixin section_title {
+    .section_title {
+        color: #FFFFFF;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+@mixin spare_item_title {
+    .spare_item_title {
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 5px;
+    }
+}
+
+@mixin spare_item_price {
+    .spare_item_price {
+        color: #A3B8CC;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+}

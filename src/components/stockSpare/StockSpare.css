@@ -1,0 +1,28 @@
+.spare_item_title {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 5px;
+}
+
+.spare_item_price {
+  color: #A3B8CC;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.spare_item_wrapper {
+  max-width: 236px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spare_item_quantity {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-top: 15px;
+}/*# sourceMappingURL=StockSpare.css.map */

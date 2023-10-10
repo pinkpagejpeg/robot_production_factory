@@ -1,0 +1,83 @@
+.section_number {
+  color: #667380;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.section_title {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+
+.wallet_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px 0;
+}
+.wallet_side {
+  padding: 9px 106px 0 0;
+}
+.wallet_money_info {
+  margin: 24px 0 44px 0;
+  color: #A3B8CC;
+  font-size: 24px;
+  font-weight: 500;
+}
+.wallet_money_number {
+  font-weight: 700;
+}
+.wallet_loot {
+  display: flex;
+  align-items: center;
+}
+.wallet_button_loot {
+  color: #FF7F22;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.wallet_button_loot:hover {
+  color: #FF5722;
+  transition: 0.5s;
+}
+.wallet_checkbox_loot {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.wallet_checkbox_loot + .wallet_checkbox_info {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.wallet_checkbox_loot + .wallet_checkbox_info::before {
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #A3B8CC;
+  margin: 0 12px 0 31px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.wallet_checkbox_loot:checked + .wallet_checkbox_info::before {
+  background-image: url("./../../assets/images/checkbox_checked.svg");
+}
+.wallet_checkbox_info {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}/*# sourceMappingURL=Wallet.css.map */

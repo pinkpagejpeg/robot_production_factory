@@ -1,0 +1,25 @@
+@import "./../../styles/mixins";
+@include section_number;
+@include section_title;
+
+.stock {
+    
+    &_wrapper {
+        display: flex;
+        padding: 50px 0;
+    }
+
+    &_side {
+        padding: 9px 106px 0 0;
+    }
+
+    &_main {
+        width: 100%;
+    }
+
+    &_spares {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

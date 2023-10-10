@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './Hero.css'
 import heroRobots from './../../assets/images/hero_robots.png'
 
 const Hero = () => {
