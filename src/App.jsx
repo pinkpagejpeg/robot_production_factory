@@ -6,6 +6,7 @@ import Hero from './components/hero/Hero'
 import Wallet from './components/wallet/Wallet'
 import Market from './components/market/Market'
 import Stock from './components/stock/Stock'
+import Production from './components/production/Production'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
         <Wallet />
         <Market />
         <Stock />
+        <Production />
       </div>
     </div>
   )
