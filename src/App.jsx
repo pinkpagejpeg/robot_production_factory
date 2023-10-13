@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import React from 'react'
 import './styles/App.css'
 import Header from './components/header/Header'
@@ -8,21 +8,20 @@ import Market from './components/market/Market'
 import Stock from './components/stock/Stock'
 import Production from './components/production/Production'
 
-function App() {
-  // const [count, setCount] = useState(0)
+  function App() {
 
-  return (
-    <div className="App">
-      <div className="container">
-        <Header />
-        <Hero />
-        <Wallet />
-        <Market />
-        <Stock />
-        <Production />
+    return (
+      <div className="App">
+        <div className="container">
+          <Header />
+          <Hero />
+          <Wallet />
+          <Market />
+          <Stock />
+          <Production />
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
 export default App
