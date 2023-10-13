@@ -29,6 +29,18 @@
   font-size: 24px;
   font-weight: 500;
 }
+.wallet_money_image {
+  display: inline-block;
+}
+.wallet_coins_image {
+  display: inline-block;
+  position: relative;
+  max-width: 16px;
+  margin-left: -8px;
+}
+.wallet_coins_image:nth-child(1) {
+  margin-left: 0;
+}
 .wallet_money_number {
   font-weight: 700;
 }
@@ -49,6 +61,14 @@
 .wallet_button_loot:hover {
   color: #FF5722;
   transition: 0.5s;
+}
+.wallet_button_loot:enabled:active {
+  color: #FF7F22;
+  text-decoration: none;
+}
+.wallet_button_loot:disabled {
+  color: #4C5865;
+  text-decoration: none;
 }
 .wallet_checkbox_loot {
   position: absolute;

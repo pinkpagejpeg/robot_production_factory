@@ -21,6 +21,21 @@
         font-weight: 500;
     }
 
+    &_money_image {
+        display: inline-block;
+    }
+
+    &_coins_image {
+        display: inline-block;
+        position: relative;
+        max-width: 16px;
+        margin-left: -8px;
+    }
+
+    &_coins_image:nth-child(1) {
+        margin-left: 0;
+    }
+
     &_money_number {
         font-weight: 700;
     }
@@ -44,6 +59,16 @@
     &_button_loot:hover {
         color: #FF5722;
         transition: 0.5s;
+    }
+
+    &_button_loot:enabled:active {
+        color: #FF7F22;
+        text-decoration: none;
+    }
+
+    &_button_loot:disabled {
+        color: #4C5865;
+        text-decoration: none;
     }
 
     &_checkbox_loot {
