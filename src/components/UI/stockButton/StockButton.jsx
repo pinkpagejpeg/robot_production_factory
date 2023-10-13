@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const StockButton = ({children, ...props}) => {
     return ( 
-        <a {...props} className={classes.stock_btn} href="#">{children}</a>
+        <button {...props} className={classes.stock_btn}>{children}</button>
     );
 }
  

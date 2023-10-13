@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const ProductionButton = ({children, ...props}) => {
     return ( 
-        <a {...props} className={classes.production_btn} href="#">{children}</a>
+        <button {...props} className={classes.production_btn}>{children}</button>
     );
 }
  

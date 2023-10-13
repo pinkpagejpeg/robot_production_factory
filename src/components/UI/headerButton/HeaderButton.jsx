@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const HeaderButton = ({children, ...props}) => {
     return ( 
-        <a {...props} className={classes.header_btn} href="#">{children}</a>
+        <button {...props} className={classes.header_btn} >{children}</button>
     );
 }
  

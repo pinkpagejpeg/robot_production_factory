@@ -37,6 +37,7 @@
   align-items: center;
 }
 .wallet_button_loot {
+  cursor: pointer;
   color: #FF7F22;
   font-size: 16px;
   font-weight: 500;
