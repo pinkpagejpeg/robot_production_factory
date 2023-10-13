@@ -26,8 +26,10 @@ const Wallet = observer(() => {
 
     useEffect(() => {
         if (coins >= 10) {
-          setModalVisible(true);
-          setDisabled(!disabled);
+            setModalVisible(true);
+            setDisabled(true);
+        } else {
+            setDisabled(false);
         }
       }, [coins]);
 

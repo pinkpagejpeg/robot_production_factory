@@ -6,6 +6,7 @@ import microchip from './../../assets/images/microchip.svg'
 import soul from './../../assets/images/soul.svg'
 
 const Market = () => {
+
     return ( 
         <div className="market_wrapper">
             <div className="market_side">
@@ -14,9 +15,9 @@ const Market = () => {
             <div className="market_main">
                 <h2 className="section_title">Рынок комплектующих</h2>
                 <div className="market_spares">
-                    <MarketSpare spare={{id: 1, image: bioarm, title: 'Биорука', price: '7'}}/>
-                    <MarketSpare spare={{id: 2, image: microchip, title: 'Микрочип', price: '5'}}/>
-                    <MarketSpare spare={{id: 3, image: soul, title: 'Душа', price: '25'}}/>
+                    <MarketSpare spare={{id: 1, image: bioarm, title: 'Биорука', price: 7}}/>
+                    <MarketSpare spare={{id: 2, image: microchip, title: 'Микрочип', price: 5}}/>
+                    <MarketSpare spare={{id: 3, image: soul, title: 'Душа', price: 25}}/>
                 </div>
             </div>
         </div>
