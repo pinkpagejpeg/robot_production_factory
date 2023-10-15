@@ -12,25 +12,26 @@
   font-weight: 600;
   line-height: 24px;
   margin-top: 24px;
+  transition: all 0.3s linear;
 }
 
 .stock_btn:hover {
   background: #7CDAF9;
   border: 2px solid #7CDAF9;
-  transition: all 0.5s linear;
   box-shadow: 0px 10px 40px 0px #1E5466;
 }
 
 .stock_btn:disabled {
+  cursor: default;
   background: transparent;
   color: #4C5865;
   border: 2px solid #4C5865;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: none;
 }
 
 .stock_btn:enabled:active {
   background: transparent;
   border: 2px solid #22B3E3;
   color: #22B3E3;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: none;
 }/*# sourceMappingURL=StockButton.module.css.map */

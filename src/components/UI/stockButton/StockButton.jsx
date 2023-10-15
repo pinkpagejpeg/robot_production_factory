@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './StockButton.module.css'
-import { useState } from 'react';
 
 const StockButton = ({children, ...props}) => {
     return ( 

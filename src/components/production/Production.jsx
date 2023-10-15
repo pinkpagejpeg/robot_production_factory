@@ -6,7 +6,7 @@ import ProductionRobotOptions from '../UI/productionOptions/ProductionOptions.mo
 
 const Production = () => {
     return ( 
-        <div className="production_wrapper">
+        <div id="production" className="production_wrapper">
             <div className="production_side">
                 <span className="section_number">05</span>
             </div>
@@ -17,7 +17,7 @@ const Production = () => {
                         <ProductionRobotOptions></ProductionRobotOptions>
 
                         <div className="production_button">
-                            <ProductionButton>Произвести за 10 монет</ProductionButton>
+                            <ProductionButton disabled={true}>Произвести за 10 монет</ProductionButton>
                             <p className="production_button_info">Для производства биоробота не хватает 2 биоруки, 3 микрочипа и 1 души</p>
                         </div>
                     </div>

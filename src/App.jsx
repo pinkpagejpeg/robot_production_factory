@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import React from 'react'
-import './styles/App.css'
+import './styles/App.scss'
 import Header from './components/header/Header'
 import Hero from './components/hero/Hero'
 import Wallet from './components/wallet/Wallet'

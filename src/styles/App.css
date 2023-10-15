@@ -11,6 +11,7 @@ body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   background: radial-gradient(82.33% 70.44% at 50% 0%, #26394D 0%, #212529 100%);
+  scroll-behavior: smooth;
 }
 
 #root {

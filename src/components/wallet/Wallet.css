@@ -57,10 +57,10 @@
   background: transparent;
   border: none;
   text-decoration: underline;
+  transition: all 0.3s linear;
 }
 .wallet_button_loot:hover {
   color: #FF5722;
-  transition: 0.5s;
 }
 .wallet_button_loot:enabled:active {
   color: #FF7F22;
@@ -69,6 +69,7 @@
 .wallet_button_loot:disabled {
   color: #4C5865;
   text-decoration: none;
+  cursor: default;
 }
 .wallet_checkbox_loot {
   position: absolute;

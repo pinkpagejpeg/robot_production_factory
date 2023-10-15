@@ -7,7 +7,7 @@ const Header = () => {
     return ( 
         <div className="header_wrapper">
             <img src={logo} alt="logo"/>
-            <HeaderButton>Произвести биоробота</HeaderButton>
+            <HeaderButton isLink to="#production">Произвести биоробота</HeaderButton>
         </div>
     );
 }

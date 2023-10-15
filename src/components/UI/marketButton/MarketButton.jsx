@@ -1,6 +1,5 @@
 import React from 'react'
-import classes from './MarketButton.module.css'
-import { useState } from 'react';
+import classes from './MarketButton.module.scss'
 
 const MarketButton = ({children, ...props}) => {
     return ( 

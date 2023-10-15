@@ -1,9 +1,10 @@
 import React from 'react'
 import classes from './HeaderButton.module.css'
-import { useState } from 'react';
 
 const HeaderButton = ({children, ...props}) => {
     return ( 
+    props.isLink ?
+        <a {...props} className={classes.header_btn} href={props.to}>{ children }</a> :
         <button {...props} className={classes.header_btn} >{children}</button>
     );
 }
