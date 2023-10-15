@@ -9,6 +9,9 @@ class WalletStore {
 
     setCoins (coinsCount) {
         this.coinsCount = coinsCount
+        if (coinsCount > 100) {
+            this.coinsCount = 100
+        }
     }
 }
 

@@ -15,7 +15,7 @@ const StockSpare = observer((props) => {
     const [disabled, setDisabled] = useState(true)
 
     useEffect(() => {
-        if ((props.spare.quantity > 0) && !(coins > 10) && !((coins + props.spare.price) > 10)) {
+        if ((props.spare.quantity > 0) && !(coins > 100) && !((coins + props.spare.price) > 100)) {
             setDisabled(false);
         } else {
             setDisabled(true);
