@@ -32,7 +32,7 @@ $darkGray: #4C5865;
     background: transparent;
 }
 
-.production_btn:active {
+.production_btn:enabled:active {
     border: 2px solid $lightOrange;
     box-shadow: none;
     background: $lightOrange;
