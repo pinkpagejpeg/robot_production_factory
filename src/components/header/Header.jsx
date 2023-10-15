@@ -1,15 +1,15 @@
 import React from 'react'
-import './Header.css'
+import './Header.scss'
 import logo from './../../assets/images/logo.svg'
 import HeaderButton from '../UI/headerButton/HeaderButton';
 
 const Header = () => {
-    return ( 
+    return (
         <div className="header_wrapper">
-            <img src={logo} alt="logo"/>
+            <img src={logo} alt="logo" />
             <HeaderButton isLink to="#production">Произвести биоробота</HeaderButton>
         </div>
     );
 }
- 
+
 export default Header;

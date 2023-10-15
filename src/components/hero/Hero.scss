@@ -1,4 +1,5 @@
-/* Hero */
+$lightGray: #A3B8CC;
+$darkGray: #667380;
 
 .hero {
     &_wrapper {
@@ -11,7 +12,7 @@
     &_side {
         display: flex;
         flex-direction: column;
-        color: #667380;
+        color: $darkGray;
         font-size: 12px;
         font-weight: 500;
         line-height: 24px;
@@ -40,14 +41,14 @@
     }
 
     &_title {
-        color: #FFF;
+        color: #FFFFFF;
         font-size: 56px;
         line-height: 72px;
         margin-bottom: 24px;
     }
 
     &_text {
-        color: #A3B8CC;
+        color: $lightGray;
         font-size: 24px;
         line-height: 32px;
     }

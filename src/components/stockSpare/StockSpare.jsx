@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './StockSpare.css'
+import './StockSpare.scss'
 import WalletStore from '../../store/WalletStore'
 import BioarmStore from '../../store/BioarmStore'
 import MicrochipStore from '../../store/MicrochipStore'
@@ -31,7 +31,6 @@ const StockSpare = observer((props) => {
             SoulStore.setSouls(souls - 1);
         }
         WalletStore.setCoins(coins + props.spare.price);
-        // setDisabled(true);
     }
 
     return (

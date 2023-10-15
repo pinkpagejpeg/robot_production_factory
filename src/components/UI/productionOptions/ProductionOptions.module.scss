@@ -1,9 +1,8 @@
 $lightGray: #A3B8CC;
-$orange: #FF7F22;
 $darkGray: #212529;
+$lightOrange: #FF7F22;
 
 .production {
-
     &_settings {
         display: flex;
         margin-bottom: 60px;
@@ -88,7 +87,7 @@ $darkGray: #212529;
         &:checked {
             +.production_radio_info {
                 &:before {
-                    background-color: $orange;
+                    background-color: $lightOrange;
                     border: 2px solid $lightGray;
                     box-shadow: inset 0 0 0 3px $darkGray;
                 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './MarketSpare.css'
+import './MarketSpare.scss'
 import WalletStore from '../../store/WalletStore'
 import BioarmStore from '../../store/BioarmStore'
 import MicrochipStore from '../../store/MicrochipStore'
@@ -13,18 +13,18 @@ const MarketSpare = observer((props) => {
     const microchips = MicrochipStore.microchipsCount
     const souls = SoulStore.soulsCount
     const [disabled, setDisabled] = useState(true)
-    
+
 
     useEffect(() => {
         if (coins >= props.spare.price) {
-          setDisabled(false);
+            setDisabled(false);
         } else {
             setDisabled(true);
         }
-      }, [coins]);
+    }, [coins]);
 
-    function handlerMarketButton () {
-        if(props.spare.id == 1) {
+    function handlerMarketButton() {
+        if (props.spare.id == 1) {
             BioarmStore.setBioarms(bioarms + 1);
         } else if (props.spare.id == 2) {
             MicrochipStore.setMicrochips(microchips + 1);

@@ -1,11 +1,11 @@
 import React from 'react'
-import './Production.css'
+import './Production.scss'
 import ProductionButton from '../UI/productionButton/ProductionButton'
 import ProductionRobotImage from '../UI/productionRobotImage/ProductionRobotImage.module'
 import ProductionRobotOptions from '../UI/productionOptions/ProductionOptions.module'
 
 const Production = () => {
-    return ( 
+    return (
         <div id="production" className="production_wrapper">
             <div className="production_side">
                 <span className="section_number">05</span>
@@ -28,5 +28,5 @@ const Production = () => {
         </div>
     );
 }
- 
+
 export default Production;

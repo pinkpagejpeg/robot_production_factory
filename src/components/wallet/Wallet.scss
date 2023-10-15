@@ -2,8 +2,12 @@
 @include section_number;
 @include section_title;
 
-.wallet {
+$lightGray: #A3B8CC;
+$darkGray: #4C5865;
+$lightOrange: #FF7F22;
+$darkOrange: #FF5722;
 
+.wallet {
     &_wrapper {
         display: flex;
         justify-content: flex-start;
@@ -16,7 +20,7 @@
 
     &_money_info {
         margin: 24px 0 44px 0;
-        color: #A3B8CC;
+        color: $lightGray;
         font-size: 24px;
         font-weight: 500;
     }
@@ -47,7 +51,7 @@
 
     &_button_loot {
         cursor: pointer;
-        color: #FF7F22;
+        color: $lightOrange;
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -58,16 +62,16 @@
     }
 
     &_button_loot:hover {
-        color: #FF5722;
+        color: $darkOrange;
     }
 
     &_button_loot:enabled:active {
-        color: #FF7F22;
+        color: $lightOrange;
         text-decoration: none;
     }
 
     &_button_loot:disabled {
-        color: #4C5865;
+        color: $darkGray;
         text-decoration: none;
         cursor: default;
     }
@@ -92,7 +96,7 @@
         height: 22px;
         flex-shrink: 0;
         flex-grow: 0;
-        border: 2px solid #A3B8CC;
+        border: 2px solid $lightGray;
         margin: 0 12px 0 31px;
         background-repeat: no-repeat;
         background-position: center center;

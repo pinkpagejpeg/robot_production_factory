@@ -1,8 +1,12 @@
+$lightBlue: #7CDAF9;
+$darkBlue: #22B3E3;
+$darkGray: #4C5865;
+
 .stock_btn {
     cursor: pointer;
     border-radius: 60px;
     padding: 12px 81.5px;
-    border: 2px solid #22B3E3;
+    border: 2px solid $darkBlue;
     background: transparent;
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
     text-decoration: none;
@@ -16,22 +20,22 @@
 }
 
 .stock_btn:hover {
-    background: #7CDAF9;
-    border: 2px solid #7CDAF9;
+    background: $lightBlue;
+    border: 2px solid $lightBlue;
     box-shadow: 0px 10px 40px 0px #1E5466;
 }
 
 .stock_btn:disabled {
     cursor: default;
     background: transparent;
-    color: #4C5865;
-    border: 2px solid #4C5865;
+    color: $darkGray;
+    border: 2px solid $darkGray;
     box-shadow: none;
 }
 
 .stock_btn:enabled:active {
     background: transparent;
-    border: 2px solid #22B3E3;
-    color: #22B3E3;
+    border: 2px solid $darkBlue;
+    color: $darkBlue;
     box-shadow: none;
 }

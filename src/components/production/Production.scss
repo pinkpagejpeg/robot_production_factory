@@ -2,6 +2,8 @@
 @include section_number;
 @include section_title;
 
+$lightGray: #A3B8CC;
+
 .production {
     &_wrapper {
         display: flex;

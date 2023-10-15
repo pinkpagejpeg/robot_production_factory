@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './ProductionOptions.module.css'
+import classes from './ProductionOptions.module.scss'
 import iconBioarmDisable from './../../../assets/images/icon_bioarm_disable.svg'
 import iconMicrochipDisable from './../../../assets/images/icon_microchip_disable.svg'
 import iconSoulDisable from './../../../assets/images/icon_soul_disable.svg'
