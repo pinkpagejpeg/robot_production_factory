@@ -35,80 +35,11 @@ $lightOrange: #FF7F22;
         max-width: 232px;
     }
 
-    &_spares_icon {
-        margin: 0 10px 16px 0;
-    }
-
-    &_spares_icon:nth-last-child(1) {
-        margin: 0 10px 0 0;
-    }
-
     &_options_title {
         color: #FFFFFF;
         font-size: 14px;
         font-weight: 500;
         line-height: 20px;
         margin-bottom: 16px;
-    }
-
-    &_radio_info {
-        color: #FFFFFF;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-        margin: 0 27px 0 0;
-    }
-}
-
-.production_radio {
-    input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-
-        +.production_radio_info {
-            &:before {
-                content: '';
-                background: $darkGray;
-                border-radius: 100%;
-                border: 2px solid $lightGray;
-                display: inline-block;
-                width: 22px;
-                height: 22px;
-                position: relative;
-                top: -0.2em;
-                margin-right: 8px;
-                vertical-align: top;
-                cursor: pointer;
-                text-align: center;
-                transition: all 250ms ease;
-            }
-        }
-
-        &:checked {
-            +.production_radio_info {
-                &:before {
-                    background-color: $lightOrange;
-                    border: 2px solid $lightGray;
-                    box-shadow: inset 0 0 0 3px $darkGray;
-                }
-            }
-        }
-
-        &:focus {
-            +.production_radio_info {
-                &:before {
-                    outline: none;
-                    border-color: $lightGray;
-                }
-            }
-        }
-
-        +.production_radio_info {
-            &:empty {
-                &:before {
-                    margin-right: 0;
-                }
-            }
-        }
     }
 }
