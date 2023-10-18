@@ -8,48 +8,48 @@ $lightOrange: #FF7F22;
 $darkOrange: #FF5722;
 
 .wallet {
-    &_wrapper {
+    &__wrapper {
         display: flex;
         justify-content: flex-start;
         padding: 50px 0;
     }
 
-    &_side {
+    &__side {
         padding: 9px 106px 0 0;
     }
 
-    &_money_info {
+    &__money_info {
         margin: 24px 0 44px 0;
         color: $lightGray;
         font-size: 24px;
         font-weight: 500;
     }
 
-    &_money_image {
+    &__money_image {
         display: inline-block;
     }
 
-    &_coins_image {
+    &__coins_image {
         display: inline-block;
         position: relative;
         max-width: 16px;
         margin-left: -8px;
     }
 
-    &_coins_image:nth-child(1) {
+    &__coins_image:nth-child(1) {
         margin-left: 0;
     }
 
-    &_money_number {
+    &__money_number {
         font-weight: 700;
     }
 
-    &_loot {
+    &__loot {
         display: flex;
         align-items: center;
     }
 
-    &_button_loot {
+    &__button_loot {
         cursor: pointer;
         color: $lightOrange;
         font-size: 16px;
@@ -61,34 +61,34 @@ $darkOrange: #FF5722;
         transition: all .3s linear;
     }
 
-    &_button_loot:hover {
+    &__button_loot:hover {
         color: $darkOrange;
     }
 
-    &_button_loot:enabled:active {
+    &__button_loot:enabled:active {
         color: $lightOrange;
         text-decoration: none;
     }
 
-    &_button_loot:disabled {
+    &__button_loot:disabled {
         color: $darkGray;
         text-decoration: none;
         cursor: default;
     }
 
-    &_checkbox_loot {
+    &__checkbox_loot {
         position: absolute;
         z-index: -1;
         opacity: 0;
     }
 
-    &_checkbox_loot+&_checkbox_info {
+    &__checkbox_loot+&__checkbox_info {
         display: inline-flex;
         align-items: center;
         user-select: none;
     }
 
-    &_checkbox_loot+&_checkbox_info::before {
+    &__checkbox_loot+&__checkbox_info::before {
         content: '';
         cursor: pointer;
         display: inline-block;
@@ -103,11 +103,11 @@ $darkOrange: #FF5722;
         background-size: 50% 50%;
     }
 
-    &_checkbox_loot:checked+&_checkbox_info::before {
+    &__checkbox_loot:checked+&__checkbox_info::before {
         background-image: url("./../../assets/images/checkbox_checked.svg");
     }
 
-    &_checkbox_info {
+    &__checkbox_info {
         color: #FFFFFF;
         font-size: 16px;
         font-weight: 500;

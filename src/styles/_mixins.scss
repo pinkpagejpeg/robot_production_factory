@@ -19,8 +19,8 @@
     }
 }
 
-@mixin spare_item_title {
-    .spare_item_title {
+@mixin spare_item__title {
+    .spare_item__title {
         color: #FFFFFF;
         font-size: 20px;
         font-weight: 600;
@@ -29,8 +29,8 @@
     }
 }
 
-@mixin spare_item_price {
-    .spare_item_price {
+@mixin spare_item__price {
+    .spare_item__price {
         color: #A3B8CC;
         font-size: 16px;
         font-weight: 500;

@@ -3,36 +3,38 @@ $darkOrange: #FF5722;
 $lightGray: #7D90A6;
 $darkGray: #4C5865;
 
-.market_btn {
-    cursor: pointer;
-    border-radius: 60px;
-    padding: 12px 69px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    border: none;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    background: $lightOrange;
-    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
-    margin-top: 24px;
-    transition: all .3s linear;
-}
+.market {
+    &__btn {
+        cursor: pointer;
+        border-radius: 60px;
+        padding: 12px 69px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        background: $lightOrange;
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+        margin-top: 24px;
+        transition: all .3s linear;
+    }
 
-.market_btn:hover {
-    background: $darkOrange;
-    box-shadow: none;
-}
+    &__btn:hover {
+        background: $darkOrange;
+        box-shadow: none;
+    }
 
-.market_btn:disabled {
-    background: $darkGray;
-    color: $lightGray;
-    cursor: default;
-    box-shadow: none;
-}
+    &__btn:disabled {
+        background: $darkGray;
+        color: $lightGray;
+        cursor: default;
+        box-shadow: none;
+    }
 
-.market_btn:enabled:active {
-    background: $lightOrange;
-    box-shadow: none;
+    &__btn:enabled:active {
+        background: $lightOrange;
+        box-shadow: none;
+    }
 }

@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import './Production.scss'
 import WalletStore from '../../store/WalletStore'
-import BioarmStore from '../../store/BioarmStore'
-import MicrochipStore from '../../store/MicrochipStore'
-import SoulStore from '../../store/SoulStore'
+import SpareStore from '../../store/SpareStore'
 import ProductionButton from '../UI/productionButton/ProductionButton'
 import ProductionRobotImage from '../UI/productionRobotImage/ProductionRobotImage'
 import ProductionRobotOptions from '../UI/productionOptions/ProductionOptions'
 
 const Production = () => {
     const coins = WalletStore.coinsCount
-    const bioarms = BioarmStore.bioarmsCount
-    const microchips = MicrochipStore.microchipsCount
-    const souls = SoulStore.soulsCount
+    const bioarms = SpareStore.bioarms.currentCount
+    const microchips = SpareStore.microchips.currentCount
+    const souls = SpareStore.souls.currentCount
     const [submit, setSubmit] = useState(false);
     const [disabled, setDisabled] = useState(true);
     const [activeSpares, setActiveSpares] = useState(false);
@@ -43,25 +41,25 @@ const Production = () => {
     const handleProductionButton = () => {
         setSubmit(true)
         setDisabled(true)
-        BioarmStore.setBioarms(bioarms - 4);
-        MicrochipStore.setMicrochips(microchips - 4);
-        SoulStore.setSouls(souls - 1);
+        SpareStore.setBioarms(bioarms - SpareStore.bioarms.requiredCount);
+        SpareStore.setMicrochips(microchips - SpareStore.microchips.requiredCount);
+        SpareStore.setSouls(souls - SpareStore.souls.requiredCount);
     }
 
     return (
-        <div id="production" className="production_wrapper">
-            <div className="production_side">
+        <div id="production" className="production__wrapper">
+            <div className="production__side">
                 <span className="section_number">05</span>
             </div>
-            <div className="production_main">
+            <div className="production__main">
                 <h2 className="section_title">Производство</h2>
-                <div className="production_main_info">
-                    <div className="production_settings_wrapper">
+                <div className="production__main_info">
+                    <div className="production__settings_wrapper">
                         <ProductionRobotOptions handleSelectedValues={handleSelectedValues} spareButtonsState={handleSpareButtons} />
 
-                        <div className="production_button">
+                        <div className="production__button">
                             <ProductionButton onClick={handleProductionButton} disabled={disabled}>Произвести за 10 монет</ProductionButton>
-                            <p className="production_button_info">Для производства биоробота не хватает 2 биоруки, 3 микрочипа и 1 души</p>
+                            <p className="production__button_info">Для производства биоробота не хватает 2 биоруки, 3 микрочипа и 1 души</p>
                         </div>
                     </div>
 

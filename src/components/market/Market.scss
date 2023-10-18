@@ -3,20 +3,20 @@
 @include section_title;
 
 .market { 
-    &_wrapper {
+    &__wrapper {
         display: flex;
         padding: 50px 0;
     }
 
-    &_side {
+    &__side {
         padding: 9px 106px 0 0;
     }
 
-    &_main {
+    &__main {
         width: 75%;
     }
 
-    &_spares {
+    &__spares {
         display: flex;
         align-items: center;
         justify-content: space-between;

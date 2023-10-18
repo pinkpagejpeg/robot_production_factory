@@ -2,14 +2,14 @@ $lightGray: #A3B8CC;
 $darkGray: #667380;
 
 .hero {
-    &_wrapper {
+    &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 48px 0 50px 0;
     }
 
-    &_side {
+    &__side {
         display: flex;
         flex-direction: column;
         color: $darkGray;
@@ -20,12 +20,12 @@ $darkGray: #667380;
         text-transform: uppercase;
     }
 
-    &_pointer_text {
+    &__pointer_text {
         transform-origin: top left;
         transform: rotate(-90deg);
     }
 
-    &_pointer_text::before {
+    &__pointer_text::before {
         content: url('./../../assets/images/scroll_arrow.svg');
         width: 24px;
         height: 24px;
@@ -35,19 +35,19 @@ $darkGray: #667380;
         margin-left: -8px;
     }
 
-    &_main {
+    &__main {
         font-weight: 600;
         max-width: 470px;
     }
 
-    &_title {
+    &__title {
         color: #FFFFFF;
         font-size: 56px;
         line-height: 72px;
         margin-bottom: 24px;
     }
 
-    &_text {
+    &__text {
         color: $lightGray;
         font-size: 24px;
         line-height: 32px;

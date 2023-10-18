@@ -3,39 +3,39 @@ $darkGray: #212529;
 $lightOrange: #FF7F22;
 
 .production {
-    &_settings {
+    &__settings {
         display: flex;
         margin-bottom: 60px;
     }
 
-    &_settings_options,
-    &_options_type,
-    &_options_stabilizer {
+    &__settings_options,
+    &__options_type,
+    &__options_stabilizer {
         display: flex;
         flex-direction: column;
     }
 
-    &_settings_options {
+    &__settings_options {
         margin-right: 20px;
     }
 
-    &_radio_wrapper {
+    &__radio_wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    &_options_type {
+    &__options_type {
         margin-bottom: 28px;
     }
 
-    &_settings_spares {
+    &__settings_spares {
         display: flex;
         flex-wrap: wrap;
         max-width: 232px;
     }
 
-    &_options_title {
+    &__options_title {
         color: #FFFFFF;
         font-size: 14px;
         font-weight: 500;

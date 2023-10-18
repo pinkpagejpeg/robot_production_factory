@@ -1,56 +1,58 @@
-.production_bioarm_btn {
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    border: none;
-    margin: 0 10px 16px 0;
-    background: url('./../../../assets/images/icon_bioarm_available.svg') no-repeat;
-    transition: all .3s linear;
-}
+.production {
+    &__bioarm_btn {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        border: none;
+        margin: 0 10px 16px 0;
+        background: url('./../../../assets/images/icon_bioarm_available.svg') no-repeat;
+        transition: all .3s linear;
+    }
 
-.production_bioarm_btn:disabled {
-    cursor: default;
-    background: url('./../../../assets/images/icon_bioarm_disable.svg') no-repeat;
-}
+    &__bioarm_btn:disabled {
+        cursor: default;
+        background: url('./../../../assets/images/icon_bioarm_disable.svg') no-repeat;
+    }
 
-.production_bioarm_btn.active {
-    background: url('./../../../assets/images/icon_bioarm_active.svg') no-repeat;
-}
+    &__bioarm_btn.active {
+        background: url('./../../../assets/images/icon_bioarm_active.svg') no-repeat;
+    }
 
-.production_microchip_btn {
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    border: none;
-    margin: 0 10px 16px 0;
-    background: url('./../../../assets/images/icon_microchip_available.svg') no-repeat;
-    transition: all .3s linear;
-}
+    &__microchip_btn {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        border: none;
+        margin: 0 10px 16px 0;
+        background: url('./../../../assets/images/icon_microchip_available.svg') no-repeat;
+        transition: all .3s linear;
+    }
 
-.production_microchip_btn:disabled {
-    cursor: default;
-    background: url('./../../../assets/images/icon_microchip_disable.svg') no-repeat;
-}
+    &__microchip_btn:disabled {
+        cursor: default;
+        background: url('./../../../assets/images/icon_microchip_disable.svg') no-repeat;
+    }
 
-.production_microchip_btn.active {
-    background: url('./../../../assets/images/icon_microchip_active.svg') no-repeat;
-}
+    &__microchip_btn.active {
+        background: url('./../../../assets/images/icon_microchip_active.svg') no-repeat;
+    }
 
-.production_soul_btn {
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    border: none;
-    margin: 0 10px 0 0;
-    background: url('./../../../assets/images/icon_soul_available.svg') no-repeat;
-    transition: all .3s linear;
-}
+    &__soul_btn {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        border: none;
+        margin: 0 10px 0 0;
+        background: url('./../../../assets/images/icon_soul_available.svg') no-repeat;
+        transition: all .3s linear;
+    }
 
-.production_soul_btn:disabled {
-    cursor: default;
-    background: url('./../../../assets/images/icon_soul_disable.svg') no-repeat;
-}
+    &__soul_btn:disabled {
+        cursor: default;
+        background: url('./../../../assets/images/icon_soul_disable.svg') no-repeat;
+    }
 
-.production_soul_btn.active {
-    background: url('./../../../assets/images/icon_soul_active.svg') no-repeat;
+    &__soul_btn.active {
+        background: url('./../../../assets/images/icon_soul_active.svg') no-repeat;
+    }
 }

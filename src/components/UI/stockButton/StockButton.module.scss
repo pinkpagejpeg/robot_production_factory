@@ -2,40 +2,42 @@ $lightBlue: #7CDAF9;
 $darkBlue: #22B3E3;
 $darkGray: #4C5865;
 
-.stock_btn {
-    cursor: pointer;
-    border-radius: 60px;
-    padding: 12px 81.5px;
-    border: 2px solid $darkBlue;
-    background: transparent;
-    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    margin-top: 24px;
-    transition: all .3s linear;
-}
+.stock {
+    &__btn {
+        cursor: pointer;
+        border-radius: 60px;
+        padding: 12px 81.5px;
+        border: 2px solid $darkBlue;
+        background: transparent;
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-top: 24px;
+        transition: all .3s linear;
+    }
 
-.stock_btn:hover {
-    background: $lightBlue;
-    border: 2px solid $lightBlue;
-    box-shadow: 0px 10px 40px 0px #1E5466;
-}
+    &__btn:hover {
+        background: $lightBlue;
+        border: 2px solid $lightBlue;
+        box-shadow: 0px 10px 40px 0px #1E5466;
+    }
 
-.stock_btn:disabled {
-    cursor: default;
-    background: transparent;
-    color: $darkGray;
-    border: 2px solid $darkGray;
-    box-shadow: none;
-}
+    &__btn:disabled {
+        cursor: default;
+        background: transparent;
+        color: $darkGray;
+        border: 2px solid $darkGray;
+        box-shadow: none;
+    }
 
-.stock_btn:enabled:active {
-    background: transparent;
-    border: 2px solid $darkBlue;
-    color: $darkBlue;
-    box-shadow: none;
+    &__btn:enabled:active {
+        background: transparent;
+        border: 2px solid $darkBlue;
+        color: $darkBlue;
+        box-shadow: none;
+    }
 }

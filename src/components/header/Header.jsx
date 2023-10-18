@@ -5,7 +5,7 @@ import HeaderButton from '../UI/headerButton/HeaderButton';
 
 const Header = () => {
     return (
-        <div className="header_wrapper">
+        <div className="header__wrapper">
             <img src={logo} alt="logo" />
             <HeaderButton isLink to="#production">Произвести биоробота</HeaderButton>
         </div>

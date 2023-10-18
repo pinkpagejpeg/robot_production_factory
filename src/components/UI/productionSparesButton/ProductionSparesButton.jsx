@@ -2,9 +2,9 @@ import React from 'react'
 import classes from './ProductionSparesButton.module.scss'
 
 const ProductionSparesButton = ({ active, children, ...props }) => {
-    const rootBioarmClasses = [classes.production_bioarm_btn]
-    const rootMicrochipClasses = [classes.production_microchip_btn]
-    const rootSoulClasses = [classes.production_soul_btn]
+    const rootBioarmClasses = [classes.production__bioarm_btn]
+    const rootMicrochipClasses = [classes.production__microchip_btn]
+    const rootSoulClasses = [classes.production__soul_btn]
 
     if (active) {
         rootBioarmClasses.push(classes.active);

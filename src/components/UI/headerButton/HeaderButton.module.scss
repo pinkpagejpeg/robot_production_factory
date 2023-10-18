@@ -2,38 +2,40 @@ $lightOrange: #FF7F22;
 $darkOrange: #FF5722;
 $darkGray: #4C5865;
 
-.header_btn {
-    cursor: pointer;
-    border-radius: 60px;
-    padding: 12px 18px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    border: 2px solid $lightOrange;
-    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
-    transition: all .3s linear;
-}
+.header {
+    &__btn {
+        cursor: pointer;
+        border-radius: 60px;
+        padding: 12px 18px;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        color: #FFFFFF;
+        background: transparent;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        border: 2px solid $lightOrange;
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+        transition: all .3s linear;
+    }
 
-.header_btn:hover {
-    border: 2px solid $darkOrange;
-    box-shadow: none;
-    background: $darkOrange;
-}
+    &__btn:hover {
+        border: 2px solid $darkOrange;
+        box-shadow: none;
+        background: $darkOrange;
+    }
 
-.header_btn:disabled {
-    border: 2px solid $darkGray;
-    cursor: default;
-    box-shadow: none;
-    color: $darkGray;
-    background: transparent;
-}
+    &__btn:disabled {
+        border: 2px solid $darkGray;
+        cursor: default;
+        box-shadow: none;
+        color: $darkGray;
+        background: transparent;
+    }
 
-.header_btn:enabled:active {
-    border: 2px solid $lightOrange;
-    box-shadow: none;
-    background: $lightOrange;
+    &__btn:enabled:active {
+        border: 2px solid $lightOrange;
+        box-shadow: none;
+        background: $lightOrange;
+    }
 }

@@ -3,7 +3,7 @@ import classes from './ProductionButton.module.scss'
 
 const ProductionButton = ({ children, ...props }) => {
     return (
-        <button {...props} className={classes.production_btn}>{children}</button>
+        <button {...props} className={classes.production__btn}>{children}</button>
     );
 }
 

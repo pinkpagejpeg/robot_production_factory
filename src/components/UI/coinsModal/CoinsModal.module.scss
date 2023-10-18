@@ -21,30 +21,30 @@
 
 .coins {
 
-    &_modal_content {
+    &__modal_content {
         padding: 8px 8px 40px 34px;
         border-radius: 10px;
         background: #FFFFFF;
     }
 
-    &_close_wrapper {
+    &__close_wrapper {
         display: flex;
         justify-content: end;
     }
 
-    &_info {
+    &__info {
         display: flex;
         justify-content: space-between;
     }
 
-    &_image {
+    &__image {
         width: 43px;
         height: 52px;
         margin-top: 15px;
         cursor: pointer;
     }
 
-    &_message {
+    &__message {
         max-width: 320px;
         padding: 0 62px 0 29px;
     }
