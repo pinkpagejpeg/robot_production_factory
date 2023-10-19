@@ -4,6 +4,7 @@
 
 $lightGray: #A3B8CC;
 $darkGray: #4C5865;
+$deepDarkGray: #333940;
 $lightOrange: #FF7F22;
 $darkOrange: #FF5722;
 
@@ -101,10 +102,22 @@ $darkOrange: #FF5722;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
+        transition: all .3s ease;
+    }
+
+    &__checkbox_loot:hover+&__checkbox_info::before {
+        border: 2px solid $darkGray;
     }
 
     &__checkbox_loot:checked+&__checkbox_info::before {
         background-image: url("./../../assets/images/checkbox_checked.svg");
+        border: 2px solid $lightGray;
+    }
+
+    &__checkbox_loot:disabled+&__checkbox_info::before {
+        border: 2px solid $deepDarkGray;
+        background-image: none;
+        cursor: default;
     }
 
     &__checkbox_info {

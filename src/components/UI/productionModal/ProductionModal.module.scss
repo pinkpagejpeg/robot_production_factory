@@ -2,7 +2,7 @@
 @include modal_title;
 @include modal_text;
 
-.coinsModal {
+.productionModal {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,16 +12,16 @@
     display: none;
 }
 
-.coinsModal.active {
+.productionModal.active {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 101;
 }
 
-.coins {
+.production {
     &__modal_content {
-        padding: 8px 8px 40px 34px;
+        padding: 8px 8px 40px 106px;
         border-radius: 10px;
         background: #FFFFFF;
     }
@@ -36,15 +36,9 @@
         justify-content: space-between;
     }
 
-    &__image {
-        width: 43px;
-        height: 52px;
-        margin-top: 15px;
-    }
-
     &__message {
         max-width: 320px;
-        padding: 0 62px 0 29px;
+        padding: 0 62px 0 0;
     }
 }
 

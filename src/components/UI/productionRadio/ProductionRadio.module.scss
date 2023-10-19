@@ -1,4 +1,6 @@
 $lightGray: #A3B8CC;
+$gray: #4C5865;
+$deepDarkGray: #333940;
 $darkGray: #212529;
 $lightOrange: #FF7F22;
 
@@ -31,7 +33,16 @@ $lightOrange: #FF7F22;
                     vertical-align: top;
                     cursor: pointer;
                     text-align: center;
-                    transition: all 250ms ease;
+                    transition: all .3s linear;
+                }
+            }
+
+            &:hover {
+                +.production__radio_info {
+                    &:before {
+                        outline: none;
+                        border: 2px solid $gray;
+                    }
                 }
             }
 
@@ -49,7 +60,7 @@ $lightOrange: #FF7F22;
                 +.production__radio_info {
                     &:before {
                         outline: none;
-                        border-color: $lightGray;
+                        border: 2px solid $lightGray;
                     }
                 }
             }
@@ -58,6 +69,17 @@ $lightOrange: #FF7F22;
                 &:empty {
                     &:before {
                         margin-right: 0;
+                    }
+                }
+            }
+
+            &:disabled {
+                +.production__radio_info {
+                    &:before {
+                        outline: none;
+                        border: 2px solid $deepDarkGray;
+                        background-color: none;
+                        cursor: default;
                     }
                 }
             }

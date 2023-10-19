@@ -5,22 +5,25 @@ import { observer } from 'mobx-react-lite'
 import ProductionSparesButton from '../productionSparesButton/ProductionSparesButton'
 import ProductionRadio from '../productionRadio/ProductionRadio'
 
-const ProductionRobotOptions = observer(({ handleSelectedValues, spareButtonsState }) => {
+const ProductionRobotOptions = observer(({ handleSelectedValues }) => {
     const bioarms = SpareStore.bioarms.currentCount
     const microchips = SpareStore.microchips.currentCount
     const souls = SpareStore.souls.currentCount
+    const selectedBioarms = SpareStore.bioarms.selectedCount
+    const selectedMicrochips = SpareStore.microchips.selectedCount
+    const selectedSouls = SpareStore.souls.selectedCount
     const [selectedType, setSelectedType] = useState('');
     const [selectedStabilizer, setSelectedStabilizer] = useState('');
 
     const [sparesBioarm, setSparesBioarm] = useState(
         Array.from({ length: SpareStore.bioarms.requiredCount }).map((bioarmItem, index) => (
-        { name: 'bioarm', available: false, active: false }
-    )));
+            { name: 'bioarm', available: false, active: false }
+        )));
 
     const [sparesMicrochip, setSparesMicrochip] = useState(
         Array.from({ length: SpareStore.microchips.requiredCount }).map((microchipItem, index) => (
-        { name: 'microchip', available: false, active: false }
-    )));
+            { name: 'microchip', available: false, active: false }
+        )));
 
     const [sparesSoul, setSparesSoul] = useState([
         { name: 'soul', available: false, active: false }
@@ -29,27 +32,45 @@ const ProductionRobotOptions = observer(({ handleSelectedValues, spareButtonsSta
     const handleActiveSpares = (index, spares, setSpares) => {
         const activeSpares = spares.map((spare, i) => {
             if (i === index) {
-                return { ...spare, active: spare.active ? false : true };
+                if (spare.active) {
+                    if (spares === sparesBioarm) {
+                        SpareStore.selectBioarms(selectedBioarms - 1)
+                    }
+                    else if (spares === sparesMicrochip) {
+                        SpareStore.selectMicrochips(selectedMicrochips - 1)
+                    } else {
+                        SpareStore.selectSouls(selectedSouls - 1)
+                    }
+
+                    return { ...spare, active: false };
+                } else {
+                    if (spares === sparesBioarm) {
+                        SpareStore.selectBioarms(selectedBioarms + 1)
+                    }
+                    else if (spares === sparesMicrochip) {
+                        SpareStore.selectMicrochips(selectedMicrochips + 1)
+                    } else {
+                        SpareStore.selectSouls(selectedSouls + 1)
+                    }
+
+                    return { ...spare, active: true };
+                }
             }
             return spare;
         });
         setSpares(activeSpares);
     };
 
-    const handleSpareButtonsChange = () => {
-        const allButtonsActive = sparesBioarm.every((spare) => spare.active) &&
-            sparesMicrochip.every((spare) => spare.active) &&
-            sparesSoul.every((spare) => spare.active);
-
-        spareButtonsState(allButtonsActive);
-    };
-
     useEffect(() => {
         const availableSparesBioarm = sparesBioarm.map((spare, index) => {
             if (index < bioarms) {
-                return { ...spare, available: true }
+                return { ...spare, available: true, active: spare.active }
             } else {
-                return { ...spare, available: false, active: false, clickCount: 1 }
+                if (spare.active && selectedBioarms > 0) {
+                    SpareStore.selectBioarms(selectedBioarms - 1);
+                }
+
+                return { ...spare, available: false, active: false };
             }
         });
 
@@ -57,9 +78,13 @@ const ProductionRobotOptions = observer(({ handleSelectedValues, spareButtonsSta
 
         const availableSparesMicrochip = sparesMicrochip.map((spare, index) => {
             if (index < microchips) {
-                return { ...spare, available: true }
+                return { ...spare, available: true, active: spare.active }
             } else {
-                return { ...spare, available: false, active: false, clickCount: 1 }
+                if (spare.active && selectedMicrochips > 0) {
+                    SpareStore.selectMicrochips(selectedMicrochips - 1);
+                }
+
+                return { ...spare, available: false, active: false };
             }
         });
 
@@ -67,18 +92,18 @@ const ProductionRobotOptions = observer(({ handleSelectedValues, spareButtonsSta
 
         const availableSparesSoul = sparesSoul.map((spare, index) => {
             if (index < souls) {
-                return { ...spare, available: true }
+                return { ...spare, available: true, active: spare.active }
             } else {
-                return { ...spare, available: false, active: false, clickCount: 1 }
+                if (spare.active && selectedSouls > 0) {
+                    SpareStore.selectSouls(selectedSouls - 1);
+                }
+
+                return { ...spare, available: false, active: false };
             }
         });
 
         setSparesSoul(availableSparesSoul);
     }, [bioarms, microchips, souls]);
-
-    useEffect(() => {
-        handleSpareButtonsChange();
-    }, [sparesBioarm, sparesMicrochip, sparesSoul]);
 
     return (
         <div className={classes.production__settings}>

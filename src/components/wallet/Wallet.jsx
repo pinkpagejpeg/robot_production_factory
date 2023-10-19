@@ -48,7 +48,6 @@ const Wallet = observer(() => {
         }
     }
 
-
     return (
         <>
             <div className="wallet__wrapper">
@@ -66,7 +65,7 @@ const Wallet = observer(() => {
                     <div className="wallet__loot">
                         <button className="wallet__button_loot" onClick={handleClickButtonLoot} disabled={disabled}>Нацыганить</button>
                         <label>
-                            <input className="wallet__checkbox_loot" type="checkbox" checked={checked} onClick={handleClickCheckbox}></input>
+                            <input className="wallet__checkbox_loot" type="checkbox" disabled={disabled} checked={checked} onClick={handleClickCheckbox}></input>
                             <span className="wallet__checkbox_info">Цыганить по 5 монет</span>
                         </label>
                     </div>
