@@ -3,7 +3,7 @@ import './StockSpare.scss'
 import WalletStore from '../../store/WalletStore'
 import SpareStore from '../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
-import StockButton from '../UI/stockButton/StockButton';
+import StockButton from '../UI/stockButton/StockButton'
 
 const StockSpare = observer((props) => {
     const coins = WalletStore.coinsCount
@@ -14,35 +14,35 @@ const StockSpare = observer((props) => {
 
     const handleStockButton = () => {
         if (props.spare.id == 1) {
-            SpareStore.setBioarms(bioarms - 1);
+            SpareStore.setBioarms(bioarms - 1)
         } else if (props.spare.id == 2) {
-            SpareStore.setMicrochips(microchips - 1);
+            SpareStore.setMicrochips(microchips - 1)
         } else {
-            SpareStore.setSouls(souls - 1);
+            SpareStore.setSouls(souls - 1)
         }
-        WalletStore.setCoins(coins + props.spare.price);
+        WalletStore.setCoins(coins + props.spare.price)
     }
     
     useEffect(() => {
         if ((props.spare.quantity > 0) && !(coins > 100) && !((coins + props.spare.price) > 100)) {
-            setDisabled(false);
+            setDisabled(false)
         } else {
-            setDisabled(true);
+            setDisabled(true)
         }
-    }, [coins, props.spare.quantity]);
+    }, [coins, props.spare.quantity])
 
     function moneyInfo(price) {
-        const lastTwoDigits = price % 100;
-        const lastDigit = price % 10;
+        const lastTwoDigits = price % 100
+        const lastDigit = price % 10
 
         if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-            return 'монет';
+            return 'монет'
         } else if (lastDigit === 1) {
-            return 'монета';
+            return 'монета'
         } else if (lastDigit >= 2 && lastDigit <= 4) {
-            return 'монеты';
+            return 'монеты'
         } else {
-            return 'монет';
+            return 'монет'
         }
     }
 

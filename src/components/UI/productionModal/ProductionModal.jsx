@@ -6,12 +6,12 @@ const ProductionModal = ({ visible, setVisible }) => {
 
     const rootClasses = [classes.productionModal]
     if (visible) {
-        rootClasses.push(classes.active);
+        rootClasses.push(classes.active)
     }
 
     const handleCloseModal = () => {
-        setVisible(false);
-    };
+        setVisible(false)
+    }
 
     return (
         <div className={rootClasses.join(' ')}>

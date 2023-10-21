@@ -1,12 +1,12 @@
 import React from 'react'
 import './Header.scss'
 import logo from './../../assets/images/logo.svg'
-import HeaderButton from '../UI/headerButton/HeaderButton';
+import HeaderButton from '../UI/headerButton/HeaderButton'
 
 const Header = () => {
     return (
         <div className="header__wrapper">
-            <img src={logo} alt="logo" />
+            <img className="header__logo" src={logo} alt="logo" />
             <HeaderButton isLink to="#production">Произвести биоробота</HeaderButton>
         </div>
     );

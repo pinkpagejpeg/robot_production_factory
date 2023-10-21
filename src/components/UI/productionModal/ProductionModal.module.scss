@@ -34,6 +34,7 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        margin-top: -7px;
     }
 
     &__message {
@@ -46,4 +47,24 @@
     background: transparent;
     border: none;
     cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .production {
+        &__modal_content {
+            padding: 8px 8px 30px 20px;
+        }
+
+        &__info {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -15px;
+        }
+
+        &__message {
+            max-width: 200px;
+            padding: 0;
+        }
+    }
 }

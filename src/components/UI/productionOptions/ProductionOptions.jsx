@@ -12,98 +12,119 @@ const ProductionRobotOptions = observer(({ handleSelectedValues }) => {
     const selectedBioarms = SpareStore.bioarms.selectedCount
     const selectedMicrochips = SpareStore.microchips.selectedCount
     const selectedSouls = SpareStore.souls.selectedCount
-    const [selectedType, setSelectedType] = useState('');
-    const [selectedStabilizer, setSelectedStabilizer] = useState('');
+    const [selectedType, setSelectedType] = useState('')
+    const [selectedStabilizer, setSelectedStabilizer] = useState('')
 
     const [sparesBioarm, setSparesBioarm] = useState(
         Array.from({ length: SpareStore.bioarms.requiredCount }).map((bioarmItem, index) => (
             { name: 'bioarm', available: false, active: false }
-        )));
+        )))
 
     const [sparesMicrochip, setSparesMicrochip] = useState(
         Array.from({ length: SpareStore.microchips.requiredCount }).map((microchipItem, index) => (
             { name: 'microchip', available: false, active: false }
-        )));
+        )))
 
     const [sparesSoul, setSparesSoul] = useState([
         { name: 'soul', available: false, active: false }
-    ]);
+    ])
 
     const handleActiveSpares = (index, spares, setSpares) => {
         const activeSpares = spares.map((spare, i) => {
             if (i === index) {
                 if (spare.active) {
-                    if (spares === sparesBioarm) {
-                        SpareStore.selectBioarms(selectedBioarms - 1)
-                    }
-                    else if (spares === sparesMicrochip) {
-                        SpareStore.selectMicrochips(selectedMicrochips - 1)
-                    } else {
-                        SpareStore.selectSouls(selectedSouls - 1)
+                    switch (spares) {
+                        case sparesBioarm:
+                            SpareStore.selectBioarms(selectedBioarms - 1)
+                            break
+                        case sparesMicrochip:
+                            SpareStore.selectMicrochips(selectedMicrochips - 1)
+                            break
+                        case sparesSoul:
+                            SpareStore.selectSouls(selectedSouls - 1)
+                            break
                     }
 
-                    return { ...spare, active: false };
+                    return { ...spare, active: false }
                 } else {
-                    if (spares === sparesBioarm) {
-                        SpareStore.selectBioarms(selectedBioarms + 1)
-                    }
-                    else if (spares === sparesMicrochip) {
-                        SpareStore.selectMicrochips(selectedMicrochips + 1)
-                    } else {
-                        SpareStore.selectSouls(selectedSouls + 1)
+                    switch (spares) {
+                        case sparesBioarm:
+                            SpareStore.selectBioarms(selectedBioarms + 1)
+                            break
+                        case sparesMicrochip:
+                            SpareStore.selectMicrochips(selectedMicrochips + 1)
+                            break
+                        case sparesSoul:
+                            SpareStore.selectSouls(selectedSouls + 1)
+                            break
                     }
 
-                    return { ...spare, active: true };
+                    return { ...spare, active: true }
                 }
             }
-            return spare;
-        });
-        setSpares(activeSpares);
-    };
+            return spare
+        })
+        setSpares(activeSpares)
+    }
 
     useEffect(() => {
         const availableSparesBioarm = sparesBioarm.map((spare, index) => {
             if (index < bioarms) {
-                return { ...spare, available: true, active: spare.active }
+                if (selectedBioarms === 0) {
+                    return { ...spare, available: true, active: false }
+                }
+                else {
+                    return { ...spare, available: true, active: spare.active }
+                }
             } else {
                 if (spare.active && selectedBioarms > 0) {
-                    SpareStore.selectBioarms(selectedBioarms - 1);
+                    SpareStore.selectBioarms(selectedBioarms - 1)
                 }
 
-                return { ...spare, available: false, active: false };
+                return { ...spare, available: false, active: false }
             }
-        });
+        })
 
-        setSparesBioarm(availableSparesBioarm);
+        setSparesBioarm(availableSparesBioarm)
 
         const availableSparesMicrochip = sparesMicrochip.map((spare, index) => {
             if (index < microchips) {
-                return { ...spare, available: true, active: spare.active }
+                if (selectedMicrochips === 0) {
+                    return { ...spare, available: true, active: false }
+                }
+                else {
+                    return { ...spare, available: true, active: spare.active }
+                }
             } else {
                 if (spare.active && selectedMicrochips > 0) {
-                    SpareStore.selectMicrochips(selectedMicrochips - 1);
+                    SpareStore.selectMicrochips(selectedMicrochips - 1)
                 }
 
-                return { ...spare, available: false, active: false };
+                return { ...spare, available: false, active: false }
             }
-        });
+        })
 
-        setSparesMicrochip(availableSparesMicrochip);
+        setSparesMicrochip(availableSparesMicrochip)
 
         const availableSparesSoul = sparesSoul.map((spare, index) => {
             if (index < souls) {
-                return { ...spare, available: true, active: spare.active }
+                if (selectedSouls === 0) {
+                    return { ...spare, available: true, active: false }
+                }
+                else {
+                    return { ...spare, available: true, active: spare.active }
+                }
             } else {
                 if (spare.active && selectedSouls > 0) {
-                    SpareStore.selectSouls(selectedSouls - 1);
+                    SpareStore.selectSouls(selectedSouls - 1)
                 }
 
-                return { ...spare, available: false, active: false };
+                return { ...spare, available: false, active: false }
             }
-        });
+        })
 
-        setSparesSoul(availableSparesSoul);
-    }, [bioarms, microchips, souls]);
+        setSparesSoul(availableSparesSoul)
+    }, [bioarms, microchips, souls])
 
     return (
         <div className={classes.production__settings}>
@@ -111,15 +132,15 @@ const ProductionRobotOptions = observer(({ handleSelectedValues }) => {
                 <div className={classes.production__options_type}>
                     <p className={classes.production__options_title}>Тип биоробота:</p>
                     <div className={classes.production__radio_wrapper}>
-                        <ProductionRadio label="Frontend" name="type" value="frontend" onChange={event => { setSelectedType(event.target.value); handleSelectedValues(event.target.value, selectedStabilizer); }} />
-                        <ProductionRadio label="Design" name="type" value="design" onChange={event => { setSelectedType(event.target.value); handleSelectedValues(event.target.value, selectedStabilizer); }} />
+                        <ProductionRadio label="Frontend" name="type" value="frontend" onChange={event => { setSelectedType(event.target.value); handleSelectedValues(event.target.value, selectedStabilizer) }} />
+                        <ProductionRadio label="Design" name="type" value="design" onChange={event => { setSelectedType(event.target.value); handleSelectedValues(event.target.value, selectedStabilizer) }} />
                     </div>
                 </div>
                 <div className={classes.production__options_stabilizer}>
                     <p className={classes.production__options_title}>Cтабилизатор:</p>
                     <div className={classes.production__radio_wrapper}>
-                        <ProductionRadio label="Male" name="stabilizator" value="male" onChange={event => { setSelectedStabilizer(event.target.value); handleSelectedValues(selectedType, event.target.value); }} />
-                        <ProductionRadio label="Famale" name="stabilizator" value="famale" onChange={event => { setSelectedStabilizer(event.target.value); handleSelectedValues(selectedType, event.target.value); }} />
+                        <ProductionRadio label="Male" name="stabilizator" value="male" onChange={event => { setSelectedStabilizer(event.target.value); handleSelectedValues(selectedType, event.target.value) }} />
+                        <ProductionRadio label="Famale" name="stabilizator" value="famale" onChange={event => { setSelectedStabilizer(event.target.value); handleSelectedValues(selectedType, event.target.value) }} />
                     </div>
                 </div>
             </div>

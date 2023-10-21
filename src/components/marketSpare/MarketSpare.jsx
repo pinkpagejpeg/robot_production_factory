@@ -3,7 +3,7 @@ import './MarketSpare.scss'
 import WalletStore from '../../store/WalletStore'
 import SpareStore from '../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
-import MarketButton from '../UI/marketButton/MarketButton';
+import MarketButton from '../UI/marketButton/MarketButton'
 
 const MarketSpare = observer((props) => {
     const coins = WalletStore.coinsCount
@@ -14,36 +14,36 @@ const MarketSpare = observer((props) => {
 
     const handlerMarketButton = () => {
         if (props.spare.id == 1) {
-            SpareStore.setBioarms(bioarms + 1);
+            SpareStore.setBioarms(bioarms + 1)
         } else if (props.spare.id == 2) {
-            SpareStore.setMicrochips(microchips + 1);
+            SpareStore.setMicrochips(microchips + 1)
         } else {
-            SpareStore.setSouls(souls + 1);
+            SpareStore.setSouls(souls + 1)
         }
-        WalletStore.setCoins(coins - props.spare.price);
-        setDisabled(true);
+        WalletStore.setCoins(coins - props.spare.price)
+        setDisabled(true)
     }
 
     useEffect(() => {
         if (coins >= props.spare.price) {
-            setDisabled(false);
+            setDisabled(false)
         } else {
-            setDisabled(true);
+            setDisabled(true)
         }
-    }, [coins]);
+    }, [coins])
 
     function moneyInfo(price) {
-        const lastTwoDigits = price % 100;
-        const lastDigit = price % 10;
+        const lastTwoDigits = price % 100
+        const lastDigit = price % 10
 
         if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-            return 'монет';
+            return 'монет'
         } else if (lastDigit === 1) {
-            return 'монета';
+            return 'монета'
         } else if (lastDigit >= 2 && lastDigit <= 4) {
-            return 'монеты';
+            return 'монеты'
         } else {
-            return 'монет';
+            return 'монет'
         }
     }
 

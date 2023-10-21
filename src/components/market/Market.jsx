@@ -7,7 +7,6 @@ import microchip from './../../assets/images/microchip.svg'
 import soul from './../../assets/images/soul.svg'
 
 const Market = () => {
-
     return (
         <div className="market__wrapper">
             <div className="market__side">

@@ -39,3 +39,11 @@ $darkGray: #4C5865;
         background: $lightOrange;
     }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .production {
+        &__btn {
+            padding: 12px 14.3px;
+        }
+    }
+}

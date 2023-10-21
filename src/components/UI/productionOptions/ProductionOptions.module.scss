@@ -43,3 +43,24 @@ $lightOrange: #FF7F22;
         margin-bottom: 16px;
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+    .production {
+        &__settings {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    .production {
+        &__settings {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        &__settings_options {
+            margin: 0 0 40px 0;
+        }
+    }
+}

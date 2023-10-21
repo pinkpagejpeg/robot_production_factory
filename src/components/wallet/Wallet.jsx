@@ -6,7 +6,6 @@ import CoinsModal from '../UI/coinsModal/CoinsModal'
 import coinsIcon from './../../assets/images/coins.png'
 
 const Wallet = observer(() => {
-
     const coins = WalletStore.coinsCount
     const [modalVisible, setModalVisible] = useState(false)
     const [checked, setChecked] = useState(false)
@@ -14,37 +13,37 @@ const Wallet = observer(() => {
 
     const handleClickButtonLoot = () => {
         if (!checked) {
-            WalletStore.setCoins(coins + 1);
+            WalletStore.setCoins(coins + 1)
         } else {
-            WalletStore.setCoins(coins + 5);
+            WalletStore.setCoins(coins + 5)
         }
     }
 
     const handleClickCheckbox = () => {
-        setChecked(!checked);
+        setChecked(!checked)
     }
 
     useEffect(() => {
         if (coins >= 100) {
-            setModalVisible(true);
-            setDisabled(true);
+            setModalVisible(true)
+            setDisabled(true)
         } else {
-            setDisabled(false);
+            setDisabled(false)
         }
-    }, [coins]);
+    }, [coins])
 
     function moneyInfo(coins) {
-        const lastTwoDigits = coins % 100;
-        const lastDigit = coins % 10;
+        const lastTwoDigits = coins % 100
+        const lastDigit = coins % 10
 
         if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-            return 'biorobo монет';
+            return 'biorobo монет'
         } else if (lastDigit === 1) {
-            return 'biorobo монета';
+            return 'biorobo монета'
         } else if (lastDigit >= 2 && lastDigit <= 4) {
-            return 'biorobo монеты';
+            return 'biorobo монеты'
         } else {
-            return 'biorobo монет';
+            return 'biorobo монет'
         }
     }
 

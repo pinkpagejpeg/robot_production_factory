@@ -18,3 +18,27 @@
         margin-top: 15px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .spare_item {
+        &__wrapper:nth-child(1) {
+            margin-right: 24px;
+        }
+
+        &__wrapper:nth-last-child(1) {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .spare_item {
+        &__wrapper {
+            margin-bottom: 40px;
+        }
+
+        &__wrapper:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+    }
+}

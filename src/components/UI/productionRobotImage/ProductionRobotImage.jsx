@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './ProductionRobotImage.module.scss'
 
 const ProductionRobotImage = ({ selectedType, selectedStabilizer, disabled, submitted }) => {
-    let imageClass = `${classes.robot__default_disable}`;
+    let imageClass = `${classes.robot__default_disable}`
 
     if (selectedType === 'frontend' && selectedStabilizer === 'male') {
         !disabled ? imageClass = `${classes.robot__front_male_available}` :

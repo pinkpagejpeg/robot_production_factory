@@ -13,7 +13,7 @@ const Hero = () => {
                 <h1 className="hero__title">Фабрика по производству биороботов</h1>
                 <p className="hero__text">класса «монитор-кресло»</p>
             </div>
-            <img src={heroRobots} alt="Hero robots image" />
+            <img className="hero__image" src={heroRobots} alt="Hero robots image" />
         </div>
     );
 }

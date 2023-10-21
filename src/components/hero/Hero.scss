@@ -57,3 +57,76 @@ $darkGray: #667380;
 .section_number {
     margin-bottom: 176px;
 }
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+    .hero {
+        &__wrapper {
+            margin: 52px 0 40px 0;
+        }
+
+        &__title {
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        &__wrapper {
+            margin: 56px 0 40px 0;
+        }
+
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .hero {
+        &__wrapper {
+            margin: 36px 0 30px 0;
+                flex-direction: column-reverse;
+                justify-content: center;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 32px;
+            text-align: center;
+            margin: 0;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__image {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1919px) {
+    .hero {
+        &__side {
+            display: none;
+        }
+
+        &__image {
+            max-width: 236px;
+        }
+    }
+}

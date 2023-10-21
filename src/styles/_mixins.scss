@@ -17,6 +17,20 @@
         line-height: 40px;
         margin-bottom: 60px;
     }
+
+    @media (min-width: 320px) and (max-width: 1919px) {
+        .section_title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .section_title {
+            text-align: center;
+        }
+    }
 }
 
 @mixin spare_item__title {
@@ -26,6 +40,13 @@
         font-weight: 600;
         line-height: 32px;
         margin-bottom: 5px;
+    }
+
+    @media (min-width: 320px) and (max-width: 1919px) {
+        .spare_item__title {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 }
 
@@ -46,6 +67,15 @@
         line-height: 40px;
         margin-bottom: 23px;
     }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .modal_title {
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 @mixin modal_text {
@@ -54,5 +84,13 @@
         font-size: 20px;
         font-weight: 600;
         line-height: 32px;
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .modal_text {
+            text-align: center;
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 }

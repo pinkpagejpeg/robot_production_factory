@@ -7,9 +7,9 @@ const ProductionSparesButton = ({ active, children, ...props }) => {
     const rootSoulClasses = [classes.production__soul_btn]
 
     if (active) {
-        rootBioarmClasses.push(classes.active);
-        rootMicrochipClasses.push(classes.active);
-        rootSoulClasses.push(classes.active);
+        rootBioarmClasses.push(classes.active)
+        rootMicrochipClasses.push(classes.active)
+        rootSoulClasses.push(classes.active)
     }
 
     return (

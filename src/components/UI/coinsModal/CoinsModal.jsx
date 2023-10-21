@@ -7,12 +7,12 @@ const CoinsModal = ({ visible, setVisible }) => {
 
     const rootClasses = [classes.coinsModal]
     if (visible) {
-        rootClasses.push(classes.active);
+        rootClasses.push(classes.active)
     }
 
     const handleCloseModal = () => {
-        setVisible(false);
-    };
+        setVisible(false)
+    }
 
     return (
         <div className={rootClasses.join(' ')}>
