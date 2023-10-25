@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import './Production.scss'
+import classes from './Production.module.scss'
 import WalletStore from '../../store/WalletStore'
 import SpareStore from '../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
 import ProductionButton from '../UI/productionButton/ProductionButton'
-import ProductionRobotImage from '../UI/productionRobotImage/ProductionRobotImage'
-import ProductionRobotOptions from '../UI/productionOptions/ProductionOptions'
+import ProductionRobotImage from './components/productionRobotImage/ProductionRobotImage'
+import ProductionRobotOptions from './components/productionRobotOptions/ProductionRobotOptions'
 import ProductionModal from '../UI/productionModal/ProductionModal'
-import productionInfo from '../../utils/productionButtonInfo'
+import productionInfo from '../../utils/productionInfo'
 
 const Production = observer(() => {
     const coins = WalletStore.coinsCount
@@ -56,19 +56,19 @@ const Production = observer(() => {
 
     return (
         <>
-            <div id="production" className="production__wrapper">
-                <div className="production__side">
-                    <span className="section_number">05</span>
+            <div id="production" className={classes.production__wrapper}>
+                <div className={classes.production__side}>
+                    <span className={classes.section_number}>05</span>
                 </div>
-                <div className="production__main">
-                    <h2 className="section_title">Производство</h2>
-                    <div className="production__main_info">
-                        <div className="production__settings_wrapper">
+                <div className={classes.production__main}>
+                    <h2 className={classes.section_title}>Производство</h2>
+                    <div className={classes.production__main_info}>
+                        <div className={classes.production__settings_wrapper}>
                             <ProductionRobotOptions handleSelectedValues={handleSelectedValues} />
 
-                            <div className="production__button">
+                            <div className={classes.production__button}>
                                 <ProductionButton onClick={handleProductionButton} disabled={disabled}>Произвести за 10 монет</ProductionButton>
-                                <p className="production__button_info">{productionButtonInfo}</p>
+                                <p className={classes.production__button_info}>{productionButtonInfo}</p>
                             </div>
                         </div>
 

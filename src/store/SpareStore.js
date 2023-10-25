@@ -1,8 +1,12 @@
+import bioarm from './../assets/images/bioarm.svg'
+import microchip from './../assets/images/microchip.svg'
+import soul from './../assets/images/soul.svg'
 import { makeAutoObservable } from 'mobx'
 
 class SpareStore {
   bioarms = {
     name: 'Биорука',
+    image: bioarm,
     buyPrice: 7,
     sellPrice: 5,
     currentCount: 0,
@@ -12,6 +16,7 @@ class SpareStore {
 
   microchips = {
     name: 'Микрочип',
+    image: microchip,
     buyPrice: 5,
     sellPrice: 3,
     currentCount: 0,
@@ -21,6 +26,7 @@ class SpareStore {
 
   souls = {
     name: 'Душа',
+    image: soul,
     buyPrice: 25,
     sellPrice: 15,
     currentCount: 0,

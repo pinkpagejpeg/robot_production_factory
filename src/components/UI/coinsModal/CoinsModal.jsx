@@ -4,7 +4,6 @@ import close from './../../../assets/images/close.svg'
 import coins from './../../../assets/images/coins.png'
 
 const CoinsModal = ({ visible, setVisible }) => {
-
     const rootClasses = [classes.coinsModal]
     if (visible) {
         rootClasses.push(classes.active)

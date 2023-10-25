@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import './MarketSpare.scss'
-import WalletStore from '../../store/WalletStore'
-import SpareStore from '../../store/SpareStore'
+import classes from './MarketSpare.module.scss'
+import WalletStore from '../../../../store/WalletStore'
+import SpareStore from '../../../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
-import MarketButton from '../UI/marketButton/MarketButton'
+import MarketButton from '../../../UI/marketButton/MarketButton'
 
 const MarketSpare = observer((props) => {
     const coins = WalletStore.coinsCount
@@ -12,7 +12,7 @@ const MarketSpare = observer((props) => {
     const souls = SpareStore.souls.currentCount
     const [disabled, setDisabled] = useState(true)
 
-    const handlerMarketButton = () => {
+    const handleMarketButton = () => {
         if (props.spare.id == 1) {
             SpareStore.setBioarms(bioarms + 1)
         } else if (props.spare.id == 2) {
@@ -48,13 +48,13 @@ const MarketSpare = observer((props) => {
     }
 
     return (
-        <div className="spare_item__wrapper">
-            <div className="spare_item__image_wrapper">
-                <img className="spare_item__image" src={props.spare.image} />
+        <div className={classes.spare_item__wrapper}>
+            <div className={classes.spare_item__image_wrapper}>
+                <img className={classes.spare_item__image} src={props.spare.image} />
             </div>
-            <h3 className="spare_item__title">{props.spare.title}</h3>
-            <p className="spare_item__price">Стоимость: {props.spare.price} {moneyInfo(props.spare.price)}</p>
-            <MarketButton onClick={handlerMarketButton} disabled={disabled}>Установить</MarketButton>
+            <h3 className={classes.spare_item__title}>{props.spare.title}</h3>
+            <p className={classes.spare_item__price}>Стоимость: {props.spare.price} {moneyInfo(props.spare.price)}</p>
+            <MarketButton onClick={handleMarketButton} disabled={disabled}>Установить</MarketButton>
         </div>
     );
 })

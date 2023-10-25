@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import './StockSpare.scss'
-import WalletStore from '../../store/WalletStore'
-import SpareStore from '../../store/SpareStore'
+import classes from './StockSpare.module.scss'
+import WalletStore from '../../../../store/WalletStore'
+import SpareStore from '../../../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
-import StockButton from '../UI/stockButton/StockButton'
+import StockButton from '../../../UI/stockButton/StockButton'
 
 const StockSpare = observer((props) => {
     const coins = WalletStore.coinsCount
@@ -47,10 +47,10 @@ const StockSpare = observer((props) => {
     }
 
     return (
-        <div className="spare_item__wrapper">
-            <h3 className="spare_item__title">{props.spare.title}</h3>
-            <p className="spare_item__price">Стоимость: {props.spare.price} {moneyInfo(props.spare.price)}</p>
-            <p className="spare_item__quantity">{props.spare.quantity} шт</p>
+        <div className={classes.spare_item__wrapper}>
+            <h3 className={classes.spare_item__title}>{props.spare.title}</h3>
+            <p className={classes.spare_item__price}>Стоимость: {props.spare.price} {moneyInfo(props.spare.price)}</p>
+            <p className={classes.spare_item__quantity}>{props.spare.quantity} шт</p>
             <StockButton onClick={handleStockButton} disabled={disabled}>Продать</StockButton>
         </div>
     );

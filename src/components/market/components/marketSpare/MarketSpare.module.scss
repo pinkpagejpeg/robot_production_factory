@@ -1,6 +1,8 @@
-@import './../../styles/mixins';
+@import '../../../../styles/mixins';
 @include spare_item__title;
 @include spare_item__price;
+
+$lightOrange: #FF7F22;
 
 .spare_item {
     &__wrapper {
@@ -10,12 +12,18 @@
         align-items: center;
     }
 
-    &__quantity {
-        color: #FFFFFF;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 32px;
-        margin-top: 15px;
+    &__image_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 236px;
+        height: 128px;
+        margin-bottom: 25px;
+    }
+
+    &__image {
+        fill: $lightOrange;
+        filter: drop-shadow(0px 8px 60px $lightOrange);
     }
 }
 
@@ -26,7 +34,7 @@
         }
 
         &__wrapper:nth-last-child(1) {
-            margin-top: 50px;
+            margin-top: 40px;
         }
     }
 }

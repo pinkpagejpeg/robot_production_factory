@@ -1,35 +1,32 @@
 import React from 'react'
-import './Market.scss'
+import classes from './Market.module.scss'
 import SpareStore from '../../store/SpareStore'
-import MarketSpare from '../marketSpare/MarketSpare'
-import bioarm from './../../assets/images/bioarm.svg'
-import microchip from './../../assets/images/microchip.svg'
-import soul from './../../assets/images/soul.svg'
+import MarketSpare from './components/marketSpare/MarketSpare'
 
 const Market = () => {
     return (
-        <div className="market__wrapper">
-            <div className="market__side">
-                <span className="section_number">03</span>
+        <div className={classes.market__wrapper}>
+            <div className={classes.market__side}>
+                <span className={classes.section_number}>03</span>
             </div>
-            <div className="market__main">
-                <h2 className="section_title">Рынок комплектующих</h2>
-                <div className="market__spares">
+            <div className={classes.market__main}>
+                <h2 className={classes.section_title}>Рынок комплектующих</h2>
+                <div className={classes.market__spares}>
                     <MarketSpare spare={{ 
                         id: 1, 
-                        image: bioarm, 
+                        image: SpareStore.bioarms.image, 
                         title: SpareStore.bioarms.name, 
                         price: SpareStore.bioarms.buyPrice 
                         }} />
                     <MarketSpare spare={{ 
                         id: 2, 
-                        image: microchip, 
+                        image: SpareStore.microchips.image, 
                         title: SpareStore.microchips.name, 
                         price: SpareStore.microchips.buyPrice 
                         }} />
                     <MarketSpare spare={{ 
                         id: 3, 
-                        image: soul, 
+                        image: SpareStore.souls.image, 
                         title: SpareStore.souls.name, 
                         price: SpareStore.souls.buyPrice 
                         }} />

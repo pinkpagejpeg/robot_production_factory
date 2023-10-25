@@ -1,19 +1,18 @@
 import React from 'react'
-import './Stock.scss'
+import classes from './Stock.module.scss'
 import SpareStore from '../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
-import StockSpare from '../stockSpare/StockSpare'
+import StockSpare from './components/stockSpare/StockSpare'
 
 const Stock = observer(() => {
-
     return (
-        <div className="stock__wrapper">
-            <div className="stock__side">
-                <span className="section_number">04</span>
+        <div className={classes.stock__wrapper}>
+            <div className={classes.stock__side}>
+                <span className={classes.section_number}>04</span>
             </div>
-            <div className="stock__main">
-                <h2 className="section_title">Склад</h2>
-                <div className="stock__spares">
+            <div className={classes.stock__main}>
+                <h2 className={classes.section_title}>Склад</h2>
+                <div className={classes.stock__spares}>
                     <StockSpare spare={{ 
                         id: 1, 
                         title: SpareStore.bioarms.name, 

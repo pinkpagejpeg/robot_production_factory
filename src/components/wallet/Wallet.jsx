@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Wallet.scss'
+import classes from './Wallet.module.scss'
 import WalletStore from '../../store/WalletStore'
 import { observer } from 'mobx-react-lite'
 import CoinsModal from '../UI/coinsModal/CoinsModal'
@@ -49,23 +49,23 @@ const Wallet = observer(() => {
 
     return (
         <>
-            <div className="wallet__wrapper">
-                <div className="wallet__side">
-                    <span className="section_number">02</span>
+            <div className={classes.wallet__wrapper}>
+                <div className={classes.wallet__side}>
+                    <span className={classes.section_number}>02</span>
                 </div>
-                <div className="wallet__main">
-                    <h2 className="section_title">Кошелёк криптовалют</h2>
-                    <div className="wallet__money_image">
+                <div className={classes.wallet__main}>
+                    <h2 className={classes.section_title}>Кошелёк криптовалют</h2>
+                    <div className={classes.wallet__money_image}>
                         {Array.from({ length: coins }).map((coinsItem, index) => (
-                            <img key={index} src={coinsIcon} alt="Coins icon" className="wallet__coins_image" style={{ zIndex: 100 - index }} />
+                            <img key={index} src={coinsIcon} alt="Coins icon" className={classes.wallet__coins_image} style={{ zIndex: 100 - index }} />
                         ))}
                     </div>
-                    <p className="wallet__money_info"><span className="wallet__money_number">{coins}</span> {moneyInfo(coins)}</p>
-                    <div className="wallet__loot">
-                        <button className="wallet__button_loot" onClick={handleClickButtonLoot} disabled={disabled}>Нацыганить</button>
+                    <p className={classes.wallet__money_info}><span className="wallet__money_number">{coins}</span> {moneyInfo(coins)}</p>
+                    <div className={classes.wallet__loot}>
+                        <button className={classes.wallet__button_loot} onClick={handleClickButtonLoot} disabled={disabled}>Нацыганить</button>
                         <label>
-                            <input className="wallet__checkbox_loot" type="checkbox" disabled={disabled} checked={checked} onClick={handleClickCheckbox}></input>
-                            <span className="wallet__checkbox_info">Цыганить по 5 монет</span>
+                            <input className={classes.wallet__checkbox_loot} type="checkbox" disabled={disabled} checked={checked} onClick={handleClickCheckbox}></input>
+                            <span className={classes.wallet__checkbox_info}>Цыганить по 5 монет</span>
                         </label>
                     </div>
                 </div>

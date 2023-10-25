@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import classes from './ProductionOptions.module.scss'
-import SpareStore from '../../../store/SpareStore'
+import classes from './ProductionRobotOptions.module.scss'
+import SpareStore from '../../../../store/SpareStore'
 import { observer } from 'mobx-react-lite'
-import ProductionSparesButton from '../productionSparesButton/ProductionSparesButton'
-import ProductionRadio from '../productionRadio/ProductionRadio'
+import ProductionSparesButton from '../../../UI/productionSparesButton/ProductionSparesButton'
+import ProductionRadio from '../../../UI/productionRadio/ProductionRadio'
 
 const ProductionRobotOptions = observer(({ handleSelectedValues }) => {
     const bioarms = SpareStore.bioarms.currentCount
